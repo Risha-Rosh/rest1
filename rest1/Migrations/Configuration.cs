@@ -17,10 +17,11 @@
         {
             context.products.AddOrUpdate(
                 p => p.id,
-                new product { name = "ass", price = "2333", department = 1 });
+                new product { id = "dhn2382", name = "asd", price = "2333", department = 1 });
             context.departments.AddOrUpdate(
                 p => p.id,
-                new department { name = "nnn", curator = "ttttttt"});
+                new department { name = "nnn", curator = "ttttttt" });
+
         }
     }
 }
