@@ -14,7 +14,7 @@ namespace rest1.Controllers
         DataContext db = new DataContext();
         public IActionResult Index()
         {
-            return View(db.products);
+            return View(db.Products);
         }
 
     }
