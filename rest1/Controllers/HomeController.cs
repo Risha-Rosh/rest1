@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using rest1.Models;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic;  
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +14,7 @@ namespace rest1.Controllers
         DataContext db = new DataContext();
         public IActionResult Index()
         {
-            return View(db.products);
+            return View(db.Products);
         }
 
     }

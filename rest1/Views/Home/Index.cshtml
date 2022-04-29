@@ -1,8 +1,35 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Магазин</title>
+</head>
+<body>
+    <h3>Товары</h3>
+    <table>
+        <tr>
+            <td>Артикул </td>
+            <td>Название </td>
+            <td>Цена </td>
+            <td>Отдел </td>
+            <td></td>
+        </tr>
+        @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.id</td>
+                    <td>@product.name</td>
+                    <td>@product.price</td>
+                    <td>@product.department</td>
+                    <td><a
+                           href ="~/Home/Buy/@product.id">Купить</a>
+                    </td>
+                </tr>
+            }
+    </table>
+</body>
+</html>
